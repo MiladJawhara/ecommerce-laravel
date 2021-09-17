@@ -67,7 +67,7 @@
                                         <a href="{{ route('product.details',['slug'=>$product->slug]) }}" title="{{ $product->name }}">
                                             <figure>
                                                 <img
-                                                    src="{{ asset('assets/images/products') }}/{{ $product->image }}.jpg"
+                                                    src="{{ asset('assets/images/products') }}/{{ $product->image }}"
                                                     alt="{{ $product->name }}">
                                             </figure>
                                         </a>
