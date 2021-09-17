@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.wrap-pagination-info ul.pagination {
+  display: flex;
+  font-weight: bold;
+  font-size: 1.5rem;
+  gap: 0.7rem;
+}
+.wrap-pagination-info ul.pagination li.page-item {
+  position: relative;
+  transition: 0.3s;
+}
+.wrap-pagination-info ul.pagination li.page-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.wrap-pagination-info ul.pagination li.page-item:hover:not(.disabled):not(.active) {
+  cursor: pointer;
+}
+.wrap-pagination-info ul.pagination li.page-item:hover:not(.disabled):not(.active):before {
+  display: block;
+  background: rgba(0, 0, 0, 0.1);
+}
+.wrap-pagination-info ul.pagination li.page-item .page-link {
+  line-height: 1;
+  padding: 0.8rem 1rem;
+  border-radius: 0;
+  border: none;
+}
+.wrap-pagination-info ul.pagination li.page-item.active .page-link {
+  background: red;
+}
